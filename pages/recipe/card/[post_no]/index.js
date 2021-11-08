@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import clientPromise from "../../../../util/mongodb";
 import { getUserOrRedirect } from "../../../api/auth";
 
-const index = ({user, recipe}) => {
+const Index = ({ user, recipe }) => {
   console.log(recipe);
   return (
     <div>
@@ -15,7 +15,6 @@ const index = ({user, recipe}) => {
       </div>
       <div>
         <h3>레시피 재료</h3>
-        
       </div>
     </div>
   );
@@ -52,4 +51,4 @@ export const getServerSideProps = async (ctx) => {
   });
   return { props: { user, recipe: newRecipe } };
 };
-export default index;
+export default Index;
